@@ -26,11 +26,11 @@ h3{font-size:clamp(22px,2.4vw,32px);margin:14px 0}
 p{color:var(--muted)}
 .lead{max-width:65ch;font-size:20px}
 .availability:before{content:"● ";color:var(--accent)}
-.sculpture{height:clamp(220px,32vw,420px);position:relative;display:grid;place-items:center;isolation:isolate}
-.sphere{width:48%;aspect-ratio:1;border-radius:50%;background:radial-gradient(circle at 29% 22%,#f6fff0,#91d5ad 15%,#328679 34%,#16414c 60%,#082432 76%,#e8ac74 96%);box-shadow:16px 20px 65px #19866c33}
-.sculpture i{position:absolute;width:88%;height:33%;border:3px solid #70b7a8;border-bottom:7px solid #c1efc6;border-radius:50%;transform:rotate(-28deg);box-shadow:0 5px 15px #001e2544}
-.sculpture i:nth-last-child(2){width:95%;height:36%;opacity:.45}
-.sculpture i:last-child{width:78%;height:28%;border-color:#e7b988;opacity:.65}
+
+
+
+
+
 .stats,.tiles,.lab,.case{display:grid;gap:18px}
 .stats,.tiles{grid-template-columns:repeat(3,1fr)}
 .stats>div,.panel,.tiles article,.timeline article,.case,.orbit{background:linear-gradient(140deg,color-mix(in srgb,var(--panel) 94%,white),var(--panel) 60%);border:1px solid var(--line);border-radius:20px;padding:clamp(20px,3vw,36px);box-shadow:0 14px 30px #0002}
@@ -60,7 +60,7 @@ footer{display:flex;justify-content:space-between;padding:24px 0}
 nav{order:1;width:100%;justify-content:center;gap:6px 14px;font-size:14px}
 .case,.hero,.lab,.split{grid-template-columns:1fr}
 .hero{gap:12px}
-.sculpture{max-width:390px;width:100%;margin:auto}
+
 .stats,.tiles,.timeline{grid-template-columns:1fr}
 .schematic{transform:none}
 section{padding:40px 0}
@@ -71,10 +71,13 @@ html{scroll-padding-top:145px}
 
 .signal{font:clamp(24px,3vw,48px)/1.7 monospace;letter-spacing:.08em;text-align:center;color:#a9f5cf;text-shadow:0 0 16px #70f9bd77;background:repeating-linear-gradient(90deg,transparent 0 23px,#a3f7cd12 24px),repeating-linear-gradient(0deg,transparent 0 23px,#a3f7cd12 24px);border-bottom:1px solid #55877a;margin-top:12px}
 
-@media(prefers-reduced-motion:no-preference){.sculpture{animation:float 7s ease-in-out infinite}
+@media(prefers-reduced-motion:no-preference){
 .case{transition:transform .22s}
 .case:hover{transform:translateY(-3px)}
 @keyframes float{50%{transform:translateY(-9px) rotate(1deg)}
 }
 }
 
+
+.hero { grid-template-columns: minmax(0, 1fr); min-height: auto; padding-block: clamp(56px, 8vw, 110px); }
+.hero > div { max-width: 72ch; }
